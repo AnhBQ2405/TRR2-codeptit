@@ -30,9 +30,6 @@ using namespace std;
 			res.pop_back();
 		}
 		int main(){
-			fstream in, out;
-			in.open("CT.INP", ios :: in);
-			out.open("CT.OUT", ios :: out);
 			cin >> V >> U;
 			for(int i = 1; i <= V; i++){
 				for(int j = 1; j <= V; j++){
@@ -43,10 +40,10 @@ using namespace std;
 			hamilton(U, 1);
 			if(v.size() == 0) cout << 0;
 			else{
+				cout << v.size() << endl;
 				for(auto x : v){
 					for(auto y : x) cout << y << ' ';
 					cout << endl;
 				}
-				cout << v.size();
 			}
 		}
